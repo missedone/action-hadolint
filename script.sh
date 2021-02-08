@@ -12,7 +12,7 @@ curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.s
 echo '::endgroup::'
 
 echo '::group:: Installing hadolint ... https://github.com/hadolint/hadolint'
-wget -q https://github.com/hadolint/hadolint/releases/download/$HADOLINT_VERSION/hadolint-Linux-x86_64 -O $TEMP_PATH/hadolint \
+curl -sfL https://github.com/hadolint/hadolint/releases/download/$HADOLINT_VERSION/hadolint-Linux-x86_64 -O $TEMP_PATH/hadolint \
     && chmod +x $TEMP_PATH/hadolint
 echo '::endgroup::'
 
